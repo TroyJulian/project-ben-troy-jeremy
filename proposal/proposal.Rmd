@@ -14,6 +14,34 @@ library(broom)
 
 
 ## 2. Data
+```{r}
+colors <- c("blue", "yellow", "green", "orange", "brown", "black", "white", "purple", "red", "tan")
+dates <- c("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019")
+sizes <- c("S", "M", "L", "XL")
+need_to_have <- c("yes", "no")
+season <- c("Winter", "Spring", "Summer", "fall", "all")
+type <- c("pants", "shorts", "shirts", "jackets", "sweaters", "socks", "underwear", "hats", "shoes", "dresses")
+state_of_repair <-c("very good", "good", "fiar", "poor", "very poor")
+sentimental_value <-c("yes", "no")
+material <- c("wool", "cotton", "Polyester", "leather")
+
+
+set.seed(1)
+clothes_use <- data.frame(
+  "Asset ID" = 1:100,	
+  "Type" = sample(type, 100, replace = TRUE),
+  "Color" = sample(colors, 100, replace = TRUE),
+  "Acquired date"	= sample(dates, 100, replace = TRUE), 
+  "State of Repair" = sample(state_of_repair, 100, replace = TRUE), 
+  "Size" = sample(sizes, 100, replace = TRUE), 
+  "Need to have" = sample(need_to_have, 100, replace = TRUE),
+  "Season" = sample(season, 100, replace = TRUE),
+  "Sentimental Value" = sample(sentimental_value, 100, replace = TRUE),
+  "Material" = sample(material, 100, replace = TRUE)
+)
+
+
+```
 
 
 
